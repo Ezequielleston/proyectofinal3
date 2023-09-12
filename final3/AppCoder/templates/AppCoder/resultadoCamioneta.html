@@ -1,0 +1,24 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}ESTE ES TU VEHICULO?{% endblock %}
+
+{% block contenido_que_cambia %}
+
+{% if camionetas %}
+
+    <h1>TU CAMIONETA</h1>
+    {% for camionetas in camionetas %}
+
+        <h3>{{ camionetas.marca }} - {{ camionetas.modelo }}</h3>
+    {% endfor %}
+
+
+{% else %}
+
+    <h1>NO SE ENCONTRARON RESULTADOS</h1>
+
+{% endif %}
+
+{% endblock %}

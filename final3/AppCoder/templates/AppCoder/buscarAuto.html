@@ -1,0 +1,16 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}ENCONTRA TU AUTO{% endblock %}
+
+{% block contenido_que_cambia %}
+<form action="{% url 'buscar' %}" method="GET">
+
+    <input type="text" name="modelo" id="modelo" placeholder="BUSQUE AQUI">
+
+    <input type="submit" value="BUSCAR">
+
+</form>
+
+{% endblock %}

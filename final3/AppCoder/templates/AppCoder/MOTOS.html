@@ -1,0 +1,21 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block titulo %}FORMULARIO DE MOTOS{% endblock %}
+
+{% block contenido_que_cambia %}
+
+<h1>FORMULARIO MOTOS</h1>
+<form action="{% url 'motos' %}" method="POST"> {% csrf_token %}
+
+    {{ formulario.as_p }}
+
+    <input type="submit" value="GUARDAR MOTO">
+
+
+</form>  
+
+<h3>{{ mensaje }}</h3>
+
+{% endblock %}
